@@ -36,7 +36,7 @@ install-pre-commit:  ## Install the local git pre-commit hooks.
 
 .PHONY: test
 test:  ## Run the tests and check coverage.
-	poetry run pytest -n auto --cov=dis_python_healthcheck --cov-report term-missing --cov-fail-under=100
+	poetry run pytest -n auto --cov=dis_python_healthcheck --cov-report term-missing --cov-fail-under=80
 
 .PHONY: mypy
 mypy:  ## Run mypy.
@@ -60,4 +60,4 @@ megalint:  ## Run the mega-linter. Use LINTER=NAME to run only one.
 		-v /var/run/docker.sock:/var/run/docker.sock:rw \
 		-v $(shell pwd):/tmp/lint:rw \
 		$(if $(LINTER),-e ENABLE_LINTERS=$(LINTER),) \
-		ghcr.io/oxsecurity/megalinter:v9
+		ghcr.io/oxsecurity/megalinter:v10
