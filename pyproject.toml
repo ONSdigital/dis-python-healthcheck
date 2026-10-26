@@ -13,7 +13,7 @@ package-mode = false
 
 [tool.poetry.dependencies]
 python = "^3.14"
-aiohttp = "^3.13"
+aiohttp = "^3.14"
 dis-python-logger = { git = "https://github.com/ONSdigital/dis-python-logger.git", tag = "v0.1.0" }
 httpx = "^0.28"
 pydantic = "^2"
@@ -21,15 +21,15 @@ requests = "^2.32"
 
 [tool.poetry.group.dev.dependencies]
 # :TODO: Remove pylint when ruff supports all pylint rules
-pylint = "^4.0.6"
+pylint = "^4.1.3"
 pytest = "^9.1.1"
 pytest-asyncio = "^1.3.0"
-pytest-mock = "^3.16.0"
+pytest-mock = "^3.17.0"
 pytest-xdist = "^3.8.0"
-ruff = "^0.15.22"
+ruff = "^0.17.1"
 pytest-cov = "^7.1.0"
-mypy = "^2.3.0"
-pre-commit = "^4.6.0"
+mypy = "^2.4.0"
+pre-commit = "^4.7.0"
 
 [tool.ruff]
 line-length = 120
